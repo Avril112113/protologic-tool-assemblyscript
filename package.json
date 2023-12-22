@@ -1,13 +1,11 @@
 {
-  "name": "code",
+  "name": "${fleet_name}",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "build": "${prototool} build",
+    "test": "npm run build && npm run sim && npm run play",
+    "build": "node --env-file=.env ./scripts/build.js",
     "sim": "${prototool} sim -d . .",
-    "play": "${prototool} play .",
-    "test": "${prototool} build --mode 4 --sim --play",
-    "test_release": "${prototool} build --sim --play"
+    "play": "${prototool} play ."
   },
   "devDependencies": {
     "@assemblyscript/wasi-shim": "^0.1.0",
