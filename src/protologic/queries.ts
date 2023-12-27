@@ -1,5 +1,5 @@
 // DO NOT MODIFY, THIS FILE IS GENERATED //
-// VERSION 0.2.0 //
+// VERSION 0.3.0 //
 
 import {Vector3} from "./Vector3";
 import {Quaternion} from "./Quaternion";

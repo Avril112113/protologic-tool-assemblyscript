@@ -1,5 +1,5 @@
 // DO NOT MODIFY, THIS FILE IS GENERATED //
-// VERSION 0.2.0 //
+// VERSION 0.3.0 //
 
 
 
@@ -293,6 +293,7 @@ export function gun3_reload(ammo: i32): void {
 declare function _internal_debug_sphere_set(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): void;
 
 /**
+ * @deprecated
  */
 export function debug_sphere_set(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): void {
 	return _internal_debug_sphere_set(x, y, z, radius, r, g, b);
@@ -303,8 +304,49 @@ export function debug_sphere_set(x: f32, y: f32, z: f32, radius: f32, r: f32, g:
 declare function _internal_debug_line_set(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): void;
 
 /**
+ * @deprecated
  */
 export function debug_line_set(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): void {
 	return _internal_debug_line_set(x1, y1, z1, x2, y2, z2, r, g, b);
+}
+
+// @ts-ignore
+@external("protologic", "debug_shape_sphere_create")
+declare function _internal_debug_shape_sphere_create(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): i32;
+
+/**
+ */
+export function debug_shape_sphere_create(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): i32 {
+	return _internal_debug_shape_sphere_create(x, y, z, radius, r, g, b);
+}
+
+// @ts-ignore
+@external("protologic", "debug_shape_line_create")
+declare function _internal_debug_shape_line_create(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): i32;
+
+/**
+ */
+export function debug_shape_line_create(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): i32 {
+	return _internal_debug_shape_line_create(x1, y1, z1, x2, y2, z2, r, g, b);
+}
+
+// @ts-ignore
+@external("protologic", "debug_shape_destroy")
+declare function _internal_debug_shape_destroy(id: i32): void;
+
+/**
+ */
+export function debug_shape_destroy(id: i32): void {
+	return _internal_debug_shape_destroy(id);
+}
+
+// @ts-ignore
+@external("protologic", "debug_pause")
+declare function _internal_debug_pause(): void;
+
+/**
+ */
+export function debug_pause(): void {
+	return _internal_debug_pause();
 }
 

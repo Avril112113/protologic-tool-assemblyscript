@@ -1,10 +1,20 @@
 // DO NOT MODIFY, THIS FILE IS GENERATED //
-// VERSION 0.2.0 //
+// VERSION 0.3.0 //
 
 
 
 // constants.ts
 
+
+// @ts-ignore
+@external("protologic", "const_get_tickseconds")
+declare function _internal_const_get_tickseconds(): f32;
+
+/**
+ */
+export function const_get_tickseconds(): f32 {
+	return _internal_const_get_tickseconds();
+}
 
 // @ts-ignore
 @external("protologic", "const_get_fueldensity")
@@ -37,23 +47,13 @@ export function const_get_spaceshipfuelconsumption(): f32 {
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missilethrust")
-declare function _internal_const_get_missilethrust(): f32;
+@external("protologic", "const_get_spaceshipfuelcapacity")
+declare function _internal_const_get_spaceshipfuelcapacity(): f32;
 
 /**
  */
-export function const_get_missilethrust(): f32 {
-	return _internal_const_get_missilethrust();
-}
-
-// @ts-ignore
-@external("protologic", "const_get_missilefuelconsumption")
-declare function _internal_const_get_missilefuelconsumption(): f32;
-
-/**
- */
-export function const_get_missilefuelconsumption(): f32 {
-	return _internal_const_get_missilefuelconsumption();
+export function const_get_spaceshipfuelcapacity(): f32 {
+	return _internal_const_get_spaceshipfuelcapacity();
 }
 
 // @ts-ignore
@@ -137,43 +137,63 @@ export function const_get_turretrefiretime(): f32 {
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missileradarminrange")
-declare function _internal_const_get_missileradarminrange(): f32;
+@external("protologic", "const_get_turretreloadtime")
+declare function _internal_const_get_turretreloadtime(): f32;
 
 /**
  */
-export function const_get_missileradarminrange(): f32 {
-	return _internal_const_get_missileradarminrange();
+export function const_get_turretreloadtime(): f32 {
+	return _internal_const_get_turretreloadtime();
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missileradarmaxrange")
-declare function _internal_const_get_missileradarmaxrange(): f32;
+@external("protologic", "const_get_turretmagazinecapacityarmourpiercing")
+declare function _internal_const_get_turretmagazinecapacityarmourpiercing(): f32;
 
 /**
  */
-export function const_get_missileradarmaxrange(): f32 {
-	return _internal_const_get_missileradarmaxrange();
+export function const_get_turretmagazinecapacityarmourpiercing(): f32 {
+	return _internal_const_get_turretmagazinecapacityarmourpiercing();
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missileradarminangle")
-declare function _internal_const_get_missileradarminangle(): f32;
+@external("protologic", "const_get_turretmagazinecapacityflak")
+declare function _internal_const_get_turretmagazinecapacityflak(): f32;
 
 /**
  */
-export function const_get_missileradarminangle(): f32 {
-	return _internal_const_get_missileradarminangle();
+export function const_get_turretmagazinecapacityflak(): f32 {
+	return _internal_const_get_turretmagazinecapacityflak();
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missileradarmaxangle")
-declare function _internal_const_get_missileradarmaxangle(): f32;
+@external("protologic", "const_get_flakshelldamage")
+declare function _internal_const_get_flakshelldamage(): f32;
 
 /**
  */
-export function const_get_missileradarmaxangle(): f32 {
-	return _internal_const_get_missileradarmaxangle();
+export function const_get_flakshelldamage(): f32 {
+	return _internal_const_get_flakshelldamage();
+}
+
+// @ts-ignore
+@external("protologic", "const_get_flakshellrange")
+declare function _internal_const_get_flakshellrange(): f32;
+
+/**
+ */
+export function const_get_flakshellrange(): f32 {
+	return _internal_const_get_flakshellrange();
+}
+
+// @ts-ignore
+@external("protologic", "const_get_apshelldamage")
+declare function _internal_const_get_apshelldamage(): f32;
+
+/**
+ */
+export function const_get_apshelldamage(): f32 {
+	return _internal_const_get_apshelldamage();
 }
 
 // @ts-ignore
@@ -197,16 +217,6 @@ export function const_get_shipradarmaxangle(): f32 {
 }
 
 // @ts-ignore
-@external("protologic", "const_get_missilerefiretime")
-declare function _internal_const_get_missilerefiretime(): f32;
-
-/**
- */
-export function const_get_missilerefiretime(): f32 {
-	return _internal_const_get_missilerefiretime();
-}
-
-// @ts-ignore
 @external("protologic", "const_get_shipbasemass")
 declare function _internal_const_get_shipbasemass(): f32;
 
@@ -214,26 +224,6 @@ declare function _internal_const_get_shipbasemass(): f32;
  */
 export function const_get_shipbasemass(): f32 {
 	return _internal_const_get_shipbasemass();
-}
-
-// @ts-ignore
-@external("protologic", "const_get_missilebasemass")
-declare function _internal_const_get_missilebasemass(): f32;
-
-/**
- */
-export function const_get_missilebasemass(): f32 {
-	return _internal_const_get_missilebasemass();
-}
-
-// @ts-ignore
-@external("protologic", "const_get_missilewheeltorque")
-declare function _internal_const_get_missilewheeltorque(): f32;
-
-/**
- */
-export function const_get_missilewheeltorque(): f32 {
-	return _internal_const_get_missilewheeltorque();
 }
 
 // @ts-ignore
@@ -254,16 +244,6 @@ declare function _internal_const_get_shipradius(): f32;
  */
 export function const_get_shipradius(): f32 {
 	return _internal_const_get_shipradius();
-}
-
-// @ts-ignore
-@external("protologic", "const_get_missileradius")
-declare function _internal_const_get_missileradius(): f32;
-
-/**
- */
-export function const_get_missileradius(): f32 {
-	return _internal_const_get_missileradius();
 }
 
 // @ts-ignore
@@ -294,5 +274,15 @@ declare function _internal_const_get_shippertickcpufuel(): i64;
  */
 export function const_get_shippertickcpufuel(): i64 {
 	return _internal_const_get_shippertickcpufuel();
+}
+
+// @ts-ignore
+@external("protologic", "const_get_wasmmemorylimit")
+declare function _internal_const_get_wasmmemorylimit(): i64;
+
+/**
+ */
+export function const_get_wasmmemorylimit(): i64 {
+	return _internal_const_get_wasmmemorylimit();
 }
 
