@@ -1,5 +1,5 @@
 // DO NOT MODIFY, THIS FILE IS GENERATED //
-// VERSION 0.3.0 //
+// VERSION 0.4.0 //
 
 
 
@@ -284,5 +284,25 @@ declare function _internal_const_get_wasmmemorylimit(): i64;
  */
 export function const_get_wasmmemorylimit(): i64 {
 	return _internal_const_get_wasmmemorylimit();
+}
+
+// @ts-ignore
+@external("protologic", "const_get_shipmissilelaunchercount")
+declare function _internal_const_get_shipmissilelaunchercount(): i32;
+
+/**
+ */
+export function const_get_shipmissilelaunchercount(): i32 {
+	return _internal_const_get_shipmissilelaunchercount();
+}
+
+// @ts-ignore
+@external("protologic", "const_get_shipmissilelauncherreloadtime")
+declare function _internal_const_get_shipmissilelauncherreloadtime(): i32;
+
+/**
+ */
+export function const_get_shipmissilelauncherreloadtime(): i32 {
+	return _internal_const_get_shipmissilelauncherreloadtime();
 }
 

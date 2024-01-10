@@ -1,5 +1,5 @@
 // DO NOT MODIFY, THIS FILE IS GENERATED //
-// VERSION 0.3.0 //
+// VERSION 0.4.0 //
 
 
 
@@ -289,28 +289,6 @@ export function gun3_reload(ammo: i32): void {
 }
 
 // @ts-ignore
-@external("protologic", "debug_sphere_set")
-declare function _internal_debug_sphere_set(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): void;
-
-/**
- * @deprecated
- */
-export function debug_sphere_set(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): void {
-	return _internal_debug_sphere_set(x, y, z, radius, r, g, b);
-}
-
-// @ts-ignore
-@external("protologic", "debug_line_set")
-declare function _internal_debug_line_set(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): void;
-
-/**
- * @deprecated
- */
-export function debug_line_set(x1: f32, y1: f32, z1: f32, x2: f32, y2: f32, z2: f32, r: f32, g: f32, b: f32): void {
-	return _internal_debug_line_set(x1, y1, z1, x2, y2, z2, r, g, b);
-}
-
-// @ts-ignore
 @external("protologic", "debug_shape_sphere_create")
 declare function _internal_debug_shape_sphere_create(x: f32, y: f32, z: f32, radius: f32, r: f32, g: f32, b: f32): i32;
 
@@ -348,5 +326,35 @@ declare function _internal_debug_pause(): void;
  */
 export function debug_pause(): void {
 	return _internal_debug_pause();
+}
+
+// @ts-ignore
+@external("protologic", "missilelauncher_trigger")
+declare function _internal_missilelauncher_trigger(index: i32): void;
+
+/**
+ */
+export function missilelauncher_trigger(index: i32): void {
+	return _internal_missilelauncher_trigger(index);
+}
+
+// @ts-ignore
+@external("protologic", "missilelauncher_set_enginetype")
+declare function _internal_missilelauncher_set_enginetype(index: i32, engine_type: i32): void;
+
+/**
+ */
+export function missilelauncher_set_enginetype(index: i32, engine_type: i32): void {
+	return _internal_missilelauncher_set_enginetype(index, engine_type);
+}
+
+// @ts-ignore
+@external("protologic", "missilelauncher_set_warheadtype")
+declare function _internal_missilelauncher_set_warheadtype(index: i32, warhead_type: i32): void;
+
+/**
+ */
+export function missilelauncher_set_warheadtype(index: i32, warhead_type: i32): void {
+	return _internal_missilelauncher_set_warheadtype(index, warhead_type);
 }
 
