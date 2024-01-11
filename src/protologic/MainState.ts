@@ -9,7 +9,12 @@ import {QS_GunData} from "./QS_GunData";
 
 
 let _data: _MainState = new _MainState();
-sharedmemory_set_readaddress(_data, _MainState.DATA_SIZE);
+
+// Used by sched_yield() to make things happy... It was angry for some reason...
+export function __internal_init__MainState(): void {
+	sharedmemory_set_readaddress(_data, _MainState.DATA_SIZE);
+}
+__internal_init__MainState();
 
 export class MainState {
 	static get position(): PackedVector3 {
