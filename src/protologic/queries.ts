@@ -29,12 +29,16 @@ export function cpu_get_fuel(): i64 {
 }
 
 // @ts-ignore
-@external("protologic", "radar_get_contact_info")
-declare function _internal_radar_get_contact_info(index: i32, dst: StaticArray<u8>): void;
+@external("protologic", "radar_get_contact_list")
+declare function _internal_radar_get_contact_list(dest: StaticArray<u8>, destCount: i32): i32;
 
 /**
  */
-export function radar_get_contact_info(index: i32, dst: RadarContactInfo): void {
-	return _internal_radar_get_contact_info(index, dst.data);
+export function radar_get_contact_list(dest: RadarContactInfo[], destCount: i32): i32 {
+	let dest_data = new StaticArray<u8>(RadarContactInfo.DATA_SIZE * destCount);
+	for (let i = 0; i < destCount; i++) {
+		dest[i] = new RadarContactInfo(dest_data, i*RadarContactInfo.DATA_SIZE);
+	}
+	return _internal_radar_get_contact_list(dest_data, destCount);
 }
 
